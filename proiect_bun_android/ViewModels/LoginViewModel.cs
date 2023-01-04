@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using proiect_bun_android.Models;
+using proiect_bun_android.Views;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace proiect_bun_android.ViewModels
 {
@@ -15,6 +17,7 @@ namespace proiect_bun_android.ViewModels
         public string Password { get => _password; set => _password = value; }
         public ICommand RegisterCommand { private set; get; }
         public ICommand LoginCommand { private set; get; }
+        
         private INavigation Navigation;
         public LoginViewModel(INavigation navigation)
         {
@@ -29,7 +32,7 @@ namespace proiect_bun_android.ViewModels
             {
                 if (string.Equals(loginData.Password, Password))
                 {
-                   // await Navigation.PushModalAsync(new ProductPage());
+                   await Navigation.PushModalAsync(new ProductPage());
                 }
                 else
                 {
