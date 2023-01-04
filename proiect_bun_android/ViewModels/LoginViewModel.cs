@@ -32,7 +32,7 @@ namespace proiect_bun_android.ViewModels
             {
                 if (string.Equals(loginData.Password, Password))
                 {
-                   await Navigation.PushModalAsync(new ProductPage());
+                   //await Navigation.PushModalAsync(new ProductPage());
                 }
                 else
                 {
